@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'measure/logo_page.dart';
+
 void main() {
   runApp(MyApp());
 }
@@ -11,12 +13,5 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: LogoPage(),
     );
-  }
-}
-
-class LogoPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }
