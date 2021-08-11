@@ -3,8 +3,10 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pulse_app/measure/controller_screen.dart';
+import 'package:pulse_app/measure/measure_screen_1.dart';
+import 'package:pulse_app/measure/measure_screen_2.dart';
 
-import 'measure_screen_1.dart';
 
 class LogoPage extends StatefulWidget {
   @override
@@ -18,7 +20,7 @@ class _LogoPageState extends State<LogoPage> {
     Timer(
         Duration(seconds: 3),
             () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (BuildContext context) => MeasureOneScreen())));
+            builder: (BuildContext context) => ControllerScreen())));
   }
   final heartLogo = SvgPicture.asset(
     'assets/vector.svg',

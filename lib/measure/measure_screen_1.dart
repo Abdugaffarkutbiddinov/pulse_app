@@ -1,17 +1,35 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class MeasureOneScreen extends StatefulWidget {
-  const MeasureOneScreen({Key? key}) : super(key: key);
+class MeasureOneScreen extends StatelessWidget {
 
-  @override
-  _MeasureOneScreenState createState() => _MeasureOneScreenState();
-}
-
-class _MeasureOneScreenState extends State<MeasureOneScreen> {
+//TODO create place for holding indicator
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.white,child: DotsIndicator(dotsCount: 2,position: 1,),);
+    return Container(
+      color: Colors.red,
+      child: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              CircleAvatar(
+                backgroundColor: Colors.yellow,
+                radius: 100,
+              ),
+
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
+
+// Container(
+// padding: EdgeInsets.all(10),
+// child: Row(
+// children: [
+// indicatorElement()
+// ],
+// ),
+// )
