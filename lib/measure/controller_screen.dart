@@ -1,9 +1,9 @@
+import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/measure/measure_screen_1.dart';
 import 'package:pulse_app/measure/measure_screen_2.dart';
 import 'package:pulse_app/measure/measure_screen_3.dart';
-import 'package:pulse_app/measure/page_indicator.dart';
 
 class ControllerScreen extends StatefulWidget {
   @override
@@ -13,29 +13,6 @@ class ControllerScreen extends StatefulWidget {
 class _ControllerScreenState extends State<ControllerScreen> {
   int pageIndex = 0;
   PageController _pageController = PageController(initialPage: 0);
-
-  List<Widget> indicatorSetup(int pageNumber) {
-    List<Widget> indicators = [];
-
-    for (int i = 0; i < 3
-    ; i++) {
-      if (pageNumber == i) {
-        indicators.add(indicatorElement(true));
-      } else
-        indicators.add(indicatorElement(false));
-    }
-    return indicators;
-  }
-
-  Widget indicatorElement(bool isActive) {
-    return Container(
-      width: 20,
-      height: 20,
-      decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: isActive ? Colors.cyan : Colors.lightBlue),
-    );
-  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,25 +37,52 @@ class _ControllerScreenState extends State<ControllerScreen> {
                   ],
                 )),
                 Container(
-                  padding: EdgeInsets.all(10),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: indicatorSetup(pageIndex)),
-                ),
-                FlatButton(
-                  onPressed: () {
-                    setState(() {
-                      _pageController.nextPage(
-                          duration: Duration(milliseconds: 1000),
-                          curve: Curves.decelerate);
-                    });
-                  },
-                  child: Text('Next'),
+                  padding: EdgeInsets.only(bottom: 30),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(10),
+                        child: DotsIndicator(
+                          dotsCount: 3,
+                          position: pageIndex.toDouble(),
+                          decorator:
+                              DotsDecorator(activeColor: Color(0xFFEF0303)),
+                        ),
+                      ),
+                      buildElevetadeButtom()],
+                  ),
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  ConstrainedBox buildElevetadeButtom() {
+    return ConstrainedBox(
+      constraints: BoxConstraints.tightFor(width: 259, height: 59),
+      child: ElevatedButton(
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          child: Text("Next".toUpperCase(), style: TextStyle(fontSize: 30)),
+        ),
+        style: ButtonStyle(
+            foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+            backgroundColor:
+                MaterialStateProperty.all<Color>(Color(0xFFFF5D8D)),
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    side: BorderSide(color: Color(0xFFFF5D8D))))),
+        onPressed: () {
+          setState(() {
+            _pageController.nextPage(
+                duration: Duration(milliseconds: 1000),
+                curve: Curves.decelerate);
+          });
+        },
       ),
     );
   }
