@@ -54,6 +54,12 @@ flutter:
   - assets/middleRectan.svg
   - assets/rectangle.svg
   - assets/smallRectan.svg
+  - assets/frame.svg
+  - assets/image.svg
+  - assets/innerHandPart.svg
+  - assets/outHandPart.svg
+  - assets/star.svg
+  - assets/image.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
