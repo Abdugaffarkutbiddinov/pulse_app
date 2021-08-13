@@ -3,28 +3,35 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pulse_app/measure/custom_widgets.dart';
 
-class MeasureFourScreen extends StatelessWidget {
-  final logo = SvgPicture.asset('assets/thirdScreenImage.svg',color: Colors.cyan,);
+class MeasureTemplateScreen extends StatelessWidget {
+  MeasureTemplateScreen({required this.image, required this.text});
+
+  final String image;
+  final String text;
   CustomWidgets customWidgets = CustomWidgets();
-  final rectangle = Image(image: AssetImage('assets/fourScreenImage.png'),);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(60),
       child: Column(
         children: [
-          SizedBox(height: 20,),
-          rectangle,
           SizedBox(
-            height: 45,
+            height: 20,
+          ),
+          Image(
+            image: AssetImage(image),
+          ),
+          SizedBox(
+            height: 60,
           ),
           Center(
             child: customWidgets.customText(
-              text: "Heart Age : Measure the age of your heart",
+              text: text,
             ),
           ),
-          SizedBox(height: 16,)
+          SizedBox(
+            height: 16,
+          )
         ],
       ),
     );

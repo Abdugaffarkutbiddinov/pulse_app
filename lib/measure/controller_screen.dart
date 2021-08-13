@@ -3,9 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/measure/measure_screen_1.dart';
 import 'package:pulse_app/measure/measure_screen_2.dart';
-import 'package:pulse_app/measure/measure_screen_3.dart';
+import 'package:pulse_app/measure/template_3_4.dart';
 
-import 'measure_screen_4.dart';
 
 class ControllerScreen extends StatefulWidget {
   @override
@@ -15,10 +14,16 @@ class ControllerScreen extends StatefulWidget {
 class _ControllerScreenState extends State<ControllerScreen> {
   int pageIndex = 0;
   PageController _pageController = PageController(initialPage: 0);
-  List<Widget> pages = [MeasureOneScreen(),
+  List<Widget> pages = [
+    MeasureOneScreen(),
     MeasureTwoScreen(),
-    MeasureThreeScreen(),
-  MeasureFourScreen()];
+    MeasureTemplateScreen(
+        image: 'assets/Rectangle.png',
+        text: "Put your finger on your camera's lens and the flashlight"),
+    MeasureTemplateScreen(
+        image: 'assets/fourScreenImage.png',
+        text: "Heart Age : Measure the age of your heart")
+  ];
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +57,10 @@ class _ControllerScreenState extends State<ControllerScreen> {
                         ),
                       ),
                       buildElevetadeButtom(),
-                    SizedBox(height: 40,)],
+                      SizedBox(
+                        height: 40,
+                      )
+                    ],
                   ),
                 ),
               ],
@@ -67,7 +75,6 @@ class _ControllerScreenState extends State<ControllerScreen> {
     return ConstrainedBox(
       constraints: BoxConstraints.tightFor(width: 259, height: 59),
       child: ElevatedButton(
-
         child: Container(
           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Text("Next".toUpperCase(), style: TextStyle(fontSize: 30)),
