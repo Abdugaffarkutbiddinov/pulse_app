@@ -60,6 +60,9 @@ flutter:
   - assets/outHandPart.svg
   - assets/star.svg
   - assets/image.png
+  - assets/thirdScreenImage.svg
+  - assets/Rectangle.png
+  - assets/fourScreenImage.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

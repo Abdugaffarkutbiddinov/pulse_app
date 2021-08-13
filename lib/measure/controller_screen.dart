@@ -5,6 +5,8 @@ import 'package:pulse_app/measure/measure_screen_1.dart';
 import 'package:pulse_app/measure/measure_screen_2.dart';
 import 'package:pulse_app/measure/measure_screen_3.dart';
 
+import 'measure_screen_4.dart';
+
 class ControllerScreen extends StatefulWidget {
   @override
   _ControllerScreenState createState() => _ControllerScreenState();
@@ -13,6 +15,10 @@ class ControllerScreen extends StatefulWidget {
 class _ControllerScreenState extends State<ControllerScreen> {
   int pageIndex = 0;
   PageController _pageController = PageController(initialPage: 0);
+  List<Widget> pages = [MeasureOneScreen(),
+    MeasureTwoScreen(),
+    MeasureThreeScreen(),
+  MeasureFourScreen()];
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +36,7 @@ class _ControllerScreenState extends State<ControllerScreen> {
                     });
                   },
                   controller: _pageController,
-                  children: [
-                    MeasureOneScreen(),
-                    MeasureTwoScreen(),
-                    MeasureThreeScreen()
-                  ],
+                  children: pages,
                 )),
                 Container(
                   padding: EdgeInsets.only(bottom: 30),
@@ -43,13 +45,14 @@ class _ControllerScreenState extends State<ControllerScreen> {
                       Container(
                         padding: EdgeInsets.all(10),
                         child: DotsIndicator(
-                          dotsCount: 3,
+                          dotsCount: pages.length,
                           position: pageIndex.toDouble(),
                           decorator:
                               DotsDecorator(activeColor: Color(0xFFEF0303)),
                         ),
                       ),
-                      buildElevetadeButtom()],
+                      buildElevetadeButtom(),
+                    SizedBox(height: 40,)],
                   ),
                 ),
               ],
@@ -64,6 +67,7 @@ class _ControllerScreenState extends State<ControllerScreen> {
     return ConstrainedBox(
       constraints: BoxConstraints.tightFor(width: 259, height: 59),
       child: ElevatedButton(
+
         child: Container(
           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
           child: Text("Next".toUpperCase(), style: TextStyle(fontSize: 30)),

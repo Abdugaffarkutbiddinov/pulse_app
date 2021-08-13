@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pulse_app/measure/custom_widgets.dart';
 
 class MeasureOneScreen extends StatelessWidget {
   final mainRectangle = SvgPicture.asset(
@@ -30,64 +31,54 @@ class MeasureOneScreen extends StatelessWidget {
       SvgPicture.asset('assets/middleRectan.svg', color: Colors.red);
   final highRectan =
       SvgPicture.asset('assets/middleRectan.svg', color: Colors.red);
+  CustomWidgets customWidget = CustomWidgets();
 
 //TODO create place for holding indicator
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 150),
-          child: Center(
-            child: Column(
-              children: [
-                SafeArea(
-                    child: PulseScheme(
-                        mainRectangle: mainRectangle,
-                        heart: heart,
-                        doubleLine: doubleLine,
-                        leftCircle: leftCircle,
-                        middleCircle: middleCircle,
-                        highestCircle: highestCircle,
-                        lineButton: lineButton,
-                        middleRectan: middleRectan,
-                        smallRectan: smallRectan)),
-                SizedBox(
-                  height: 80,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Center(
-                    child: Text(
-                      '''Correct and easy-to-use Heart 
-      Rate Monitor: Pulse App''',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 21,
-                        fontFamily: 'Raleway',
-                      ),
-
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 15.0,
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40),
-                  child: Text(
-                        'Measure the BPM and find out '
-                            'the biological age of your heart.'
-                            'View the statistics '
-                            'of your measurements at any time',
-                    style: TextStyle(fontFamily: 'Ralewafbfgh',fontSize: 15),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-              ],
+      child: Column(
+        children: [
+          SizedBox(
+            height: 20,
+          ),
+          PulseScheme(
+              mainRectangle: mainRectangle,
+              heart: heart,
+              doubleLine: doubleLine,
+              leftCircle: leftCircle,
+              middleCircle: middleCircle,
+              highestCircle: highestCircle,
+              lineButton: lineButton,
+              middleRectan: middleRectan,
+              smallRectan: smallRectan),
+          SizedBox(
+            height: 80,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Center(
+              child: customWidget.customText(
+                text: '''Correct and easy-to-use Heart 
+       Rate Monitor: Pulse App''',
+              ),
             ),
           ),
-        ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: Text(
+              'Measure the BPM and find out '
+              'the biological age of your heart.'
+              'View the statistics '
+              'of your measurements at any time',
+              style: TextStyle(fontFamily: 'Ralewafbfgh', fontSize: 15),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -188,3 +179,14 @@ class PulseScheme extends StatelessWidget {
     );
   }
 }
+
+// Text(
+// '''Correct and easy-to-use Heart
+//       Rate Monitor: Pulse App''',
+// style: TextStyle(
+// fontWeight: FontWeight.bold,
+// fontSize: 21,
+// fontFamily: 'Raleway',
+// ),
+//
+// )

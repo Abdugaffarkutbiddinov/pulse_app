@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pulse_app/measure/custom_widgets.dart';
 
 class MeasureTwoScreen extends StatelessWidget {
   final outHandPart = SvgPicture.asset(
@@ -23,34 +24,26 @@ class MeasureTwoScreen extends StatelessWidget {
     'assets/star.svg',
     color: Color(0xFFFFB803),
   );
+  CustomWidgets customWidgets = CustomWidgets();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 150),
-          child: Column(
-            children: [
-              SafeArea(
-                child: GoodSign(
-                    outHandPart: outHandPart, innerHandPart: innerHandPart),
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              SafeArea(child: FrameRate(frame: frame, star: star)),
-              SizedBox(
-                height: 16,
-              ),
-              Text(
-                'Help us to improve the app',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700,fontFamily: 'Raleway'),
-              )
-            ],
+      child: Column(
+        children: [
+          SizedBox(
+            height: 20,
           ),
-        ),
+          ThumbUp(outHandPart: outHandPart, innerHandPart: innerHandPart),
+          SizedBox(
+            height: 30,
+          ),
+          FrameRate(frame: frame, star: star),
+          SizedBox(
+            height: 16,
+          ),
+          customWidgets.customText(text: 'Help us to improve the app'),
+        ],
       ),
     );
   }
@@ -127,8 +120,8 @@ class FrameRate extends StatelessWidget {
   }
 }
 
-class GoodSign extends StatelessWidget {
-  const GoodSign({
+class ThumbUp extends StatelessWidget {
+  const ThumbUp({
     Key? key,
     required this.outHandPart,
     required this.innerHandPart,
