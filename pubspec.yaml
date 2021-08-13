@@ -63,6 +63,8 @@ flutter:
   - assets/thirdScreenImage.svg
   - assets/Rectangle.png
   - assets/fourScreenImage.png
+  - assets/subscribeImage1.svg
+  - assets/subscribeImage2.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,10 +1,11 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pulse_app/measure/constants.dart';
 import 'package:pulse_app/measure/measure_screen_1.dart';
 import 'package:pulse_app/measure/measure_screen_2.dart';
+import 'package:pulse_app/measure/subscribe_page.dart';
 import 'package:pulse_app/measure/template_3_4.dart';
-
 
 class ControllerScreen extends StatefulWidget {
   @override
@@ -22,7 +23,8 @@ class _ControllerScreenState extends State<ControllerScreen> {
         text: "Put your finger on your camera's lens and the flashlight"),
     MeasureTemplateScreen(
         image: 'assets/fourScreenImage.png',
-        text: "Heart Age : Measure the age of your heart")
+        text: "Heart Age : Measure the age of your heart"),
+    SubscribePage()
   ];
 
   Widget build(BuildContext context) {
@@ -57,9 +59,26 @@ class _ControllerScreenState extends State<ControllerScreen> {
                         ),
                       ),
                       buildElevetadeButtom(),
-                      SizedBox(
-                        height: 40,
-                      )
+                      SizedBox(height: 10,),
+                      Opacity(
+                          opacity: pageIndex == (pages.length - 1) ? 1 : 0,
+                          child: Text(
+                            "\$3 Per week",
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontFamily: 'Raleway',
+                                fontWeight: FontWeight.w400),
+                          )),
+                      SizedBox(height: 10,),
+                      Opacity(
+                          opacity: pageIndex == (pages.length - 1) ? 1 : 0,
+                          child: Text(
+                            "By continuing, you agree to our Privacy Policy and Terms of Use",
+                            style: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Raleway'),
+                          )),
                     ],
                   ),
                 ),
@@ -77,16 +96,22 @@ class _ControllerScreenState extends State<ControllerScreen> {
       child: ElevatedButton(
         child: Container(
           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
-          child: Text("Next".toUpperCase(), style: TextStyle(fontSize: 30)),
+          child: Text(
+              pageIndex == (pages.length - 1)
+                  ? "Subscribe".toUpperCase()
+                  : "Next".toUpperCase(),
+              style: TextStyle(
+                  fontSize: 30,
+                  fontFamily: 'Raleway',
+                  fontWeight: FontWeight.w700)),
         ),
         style: ButtonStyle(
             foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
-            backgroundColor:
-                MaterialStateProperty.all<Color>(Color(0xFFFF5D8D)),
+            backgroundColor: MaterialStateProperty.all<Color>(pinky),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),
-                    side: BorderSide(color: Color(0xFFFF5D8D))))),
+                    side: BorderSide(color: pinky)))),
         onPressed: () {
           setState(() {
             _pageController.nextPage(
