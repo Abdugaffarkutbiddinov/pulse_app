@@ -24,7 +24,6 @@ class MeasureTwoScreen extends StatelessWidget {
     'assets/star.svg',
     color: Color(0xFFFFB803),
   );
-  CustomWidgets customWidgets = CustomWidgets();
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +41,7 @@ class MeasureTwoScreen extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          customWidgets.customText(text: 'Help us to improve the app'),
+          CustomText(text: 'Help us to improve the app', fontSize: 21,fontWeight: FontWeight.w700,),
         ],
       ),
     );

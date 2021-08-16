@@ -47,7 +47,10 @@ class SubscribePage extends StatelessWidget {
               child: Stack(
                 children: [
                   Positioned(
-                    child: CustomWidgets().customText(text: 'Heart Age Test'),
+                    child: CustomText(
+                        text: 'Heart Age Test',
+                        fontSize: 21,
+                        fontWeight: FontWeight.w700),
                     top: 20,
                     left: 100,
                   ),
@@ -56,8 +59,10 @@ class SubscribePage extends StatelessWidget {
                     top: 25,
                   ),
                   Positioned(
-                    child: CustomWidgets()
-                        .customText(text: 'Monitor your health stats'),
+                    child: CustomText(
+                        text: 'Monitor your health stats',
+                        fontSize: 21,
+                        fontWeight: FontWeight.w700),
                     top: 80,
                     left: 50,
                   ),
@@ -66,8 +71,10 @@ class SubscribePage extends StatelessWidget {
                     top: 120,
                   ),
                   Positioned(
-                    child:
-                        CustomWidgets().customText(text: 'History of dimensions'),
+                    child: CustomText(
+                        text: 'History of dimensions',
+                        fontSize: 21,
+                        fontWeight: FontWeight.w700),
                     top: 160,
                     left: 70,
                   )

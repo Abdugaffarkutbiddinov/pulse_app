@@ -5,7 +5,6 @@ import 'package:pulse_app/measure/custom_widgets.dart';
 import 'package:pulse_app/measure/pulse_scheme.dart';
 
 class MeasureOneScreen extends StatelessWidget {
-   CustomWidgets customWidget = CustomWidgets();
 
 //TODO create place for holding indicator
   @override
@@ -23,9 +22,9 @@ class MeasureOneScreen extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: Center(
-              child: customWidget.customText(
+              child: CustomText(
                 text: '''Correct and easy-to-use Heart 
-       Rate Monitor: Pulse App''',
+       Rate Monitor: Pulse App''', fontSize: 21,fontWeight: FontWeight.w700,
               ),
             ),
           ),

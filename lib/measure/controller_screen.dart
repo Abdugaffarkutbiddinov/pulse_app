@@ -2,6 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/actual_measure/navigator.dart';
+import 'package:pulse_app/custom_widgets/mainButton.dart';
 import 'package:pulse_app/measure/constants.dart';
 import 'package:pulse_app/measure/measure_screen_1.dart';
 import 'package:pulse_app/measure/measure_screen_2.dart';
@@ -59,7 +60,25 @@ class _ControllerScreenState extends State<ControllerScreen> {
                               DotsDecorator(activeColor: Color(0xFFEF0303)),
                         ),
                       ),
-                      buildElevetadeButtom(),
+                      MainButton(
+                          text: pageIndex == (pages.length - 1)
+                              ? "Subscribe".toUpperCase()
+                              : "Next".toUpperCase(),
+                          onPressed: () {
+                            setState(() {
+                              if (pageIndex != pages.length - 1) {
+                                _pageController.nextPage(
+                                    duration: Duration(milliseconds: 1000),
+                                    curve: Curves.decelerate);
+                              } else {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => NavigationMenu()),
+                                );
+                              }
+                            });
+                          }),
                       SizedBox(
                         height: 10,
                       ),

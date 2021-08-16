@@ -8,7 +8,6 @@ class MeasureTemplateScreen extends StatelessWidget {
 
   final String image;
   final String text;
-  CustomWidgets customWidgets = CustomWidgets();
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +24,8 @@ class MeasureTemplateScreen extends StatelessWidget {
             height: 60,
           ),
           Center(
-            child: customWidgets.customText(
-              text: text,
-            ),
+            child: CustomText(
+                text: text, fontSize: 21, fontWeight: FontWeight.w700),
           ),
           SizedBox(
             height: 16,
