@@ -79,6 +79,14 @@ flutter:
   - assets/rightColored.svg
   - assets/middleColored.svg
   - assets/gray.svg
+  - assets/clockFrame.svg
+  - assets/feather.svg
+  - assets/leftBookCover.svg
+  - assets/leftBookPage.svg
+  - assets/rightBookCover.svg
+  - assets/rightBookPage.svg
+  - assets/statisticsClockPointer.svg
+  - assets/statisticsFrame.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
