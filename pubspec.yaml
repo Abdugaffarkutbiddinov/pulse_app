@@ -67,6 +67,18 @@ flutter:
   - assets/subscribeImage2.svg
   - assets/heartButton.svg
   - assets/Start.svg
+  - assets/emojiBody.svg
+  - assets/leftEmojiLeftEye.svg
+  - assets/leftEmojiMouth.svg
+  - assets/leftEmojiRightEye.svg
+  - assets/middleEmojiEye.svg
+  - assets/middleEmojiMouth.svg
+  - assets/rightEmojiEye.svg
+  - assets/rightEmojiMouth.svg
+  - assets/leftColored.svg
+  - assets/rightColored.svg
+  - assets/middleColored.svg
+  - assets/gray.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

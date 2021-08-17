@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/actual_measure/navigator.dart';
 import 'package:pulse_app/custom_widgets/mainButton.dart';
+import 'package:pulse_app/custom_widgets/measurePageView.dart';
 import 'package:pulse_app/measure/constants.dart';
 import 'package:pulse_app/measure/measure_screen_1.dart';
 import 'package:pulse_app/measure/measure_screen_2.dart';

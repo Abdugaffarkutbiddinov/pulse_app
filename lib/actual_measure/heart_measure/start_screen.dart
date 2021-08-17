@@ -128,38 +128,4 @@ class _StartScreenState extends State<StartScreen> {
       ),
     );
   }
-
-//   IconButton buildIconButton() {
-//     return IconButton(
-//       iconSize: 200,
-//       onPressed: () {
-//         setState(() {
-//           print("heartBeats");
-//         });
-//       },
-//       icon: Stack(
-//         children: [
-//           _heartImage,
-//           Positioned(
-//             child: Text(
-//               "Start".toUpperCase(),
-//               style: TextStyle(
-//                 fontWeight: FontWeight.w700,
-//                 fontSize: 26,
-//                 fontFamily: 'Raleway',
-//                 color: Color(0xFFFFFFFF),
-//               ),
-//               textAlign: TextAlign.center,
-//             ),
-//             top: 54.9,
-//             left: 19,
-//             right: 20,
-//             bottom: 77.9,
-//           ),
-//         ],
-//       ),
-//     );
-//   }
-// }
-
 }

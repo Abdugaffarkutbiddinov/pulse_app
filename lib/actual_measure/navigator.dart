@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/actual_measure/heart_measure/result_screen.dart';
+import 'package:pulse_app/custom_widgets/measurePageView.dart';
 import 'package:pulse_app/measure/constants.dart';
 
 import 'heart_measure/start_screen.dart';
@@ -13,9 +14,10 @@ class NavigationMenu extends StatefulWidget {
 }
 
 class _NavigationMenuState extends State<NavigationMenu> {
-  final tabs = [
-   StartScreen(),
-    ResultScreen(),
+  final tabs = [MeasurePageView(),
+    Container(
+      color: Color(0xFFAA7878),
+    ),
     Container(
       color: Color(0xFFAA7878),
     ),
