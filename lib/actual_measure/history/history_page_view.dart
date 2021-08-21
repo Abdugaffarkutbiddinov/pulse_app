@@ -3,16 +3,19 @@ import 'package:flutter/material.dart';
 import 'package:pulse_app/actual_measure/statistics/empty_page.dart';
 import 'package:pulse_app/actual_measure/statistics/statistics_page.dart';
 
-class StatisticsPageView extends StatefulWidget {
-  const StatisticsPageView({Key? key}) : super(key: key);
+import 'history_page.dart';
+
+class HistoryPageView extends StatefulWidget {
+  const HistoryPageView({Key? key}) : super(key: key);
 
   @override
-  _StatisticsPageViewState createState() => _StatisticsPageViewState();
+  _HistoryPageViewState createState() => _HistoryPageViewState();
 }
 
-class _StatisticsPageViewState extends State<StatisticsPageView> {
+class _HistoryPageViewState extends State<HistoryPageView> {
+
   PageController _pageController = PageController(initialPage: 0);
-  List<Widget> pages = [EmptyPage(text: 'Statistics',),StatisticsPage(),];
+  List<Widget> pages = [EmptyPage(text: 'History',),HistoryPage(),];
   bool scrollable = true;
 
   @override

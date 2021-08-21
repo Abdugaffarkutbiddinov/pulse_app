@@ -3,16 +3,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pulse_app/custom_widgets/customAppBar.dart';
 import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
-class EmptyStatistics extends StatefulWidget {
+class EmptyPage extends StatefulWidget {
   final String text;
 
-  EmptyStatistics({required this.text});
+  EmptyPage({required this.text});
 
   @override
-  _EmptyStatisticsState createState() => _EmptyStatisticsState();
+  _EmptyPageState createState() => _EmptyPageState();
 }
 
-class _EmptyStatisticsState extends State<EmptyStatistics> {
+class _EmptyPageState extends State<EmptyPage> {
   final statisticsFrame = SvgPicture.asset('assets/statisticsFrame.svg');
   final statisticsClockPointer =
       SvgPicture.asset('assets/statisticsClockPointer.svg');

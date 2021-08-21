@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/actual_measure/heart_measure/result_screen.dart';
-import 'package:pulse_app/actual_measure/heart_measure/measurePageView.dart';
+import 'package:pulse_app/actual_measure/heart_measure/measure_page_view.dart';
 import 'package:pulse_app/actual_measure/statistics/statistics_page_view.dart';
 import 'package:pulse_app/measure/constants.dart';
 
 import 'heart_measure/start_screen.dart';
+import 'history/history_page_view.dart';
 
 int _currentIndex = 0;
 
@@ -17,9 +18,7 @@ class NavigationMenu extends StatefulWidget {
 class _NavigationMenuState extends State<NavigationMenu> {
   final tabs = [MeasurePageView(),
     StatisticsPageView(),
-    Container(
-      color: Color(0xFFAA7878),
-    ),
+    HistoryPageView(),
     Container(
       color: Color(0xFF000000),
     )
