@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pulse_app/custom_widgets/customAppBar.dart';
+import 'package:pulse_app/custom_widgets/custom_app_bar.dart';
 import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class EmptyPage extends StatefulWidget {

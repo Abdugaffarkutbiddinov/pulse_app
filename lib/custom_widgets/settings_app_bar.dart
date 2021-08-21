@@ -2,16 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
-class CustomAppBar extends StatefulWidget {
-  const CustomAppBar({required this.text});
+class SettingsAppBar extends StatefulWidget {
+  const SettingsAppBar({required this.text});
 
   final String text;
 
   @override
-  _CustomAppBarState createState() => _CustomAppBarState();
+  _SettingsAppBarState createState() => _SettingsAppBarState();
 }
 
-class _CustomAppBarState extends State<CustomAppBar> {
+class _SettingsAppBarState extends State<SettingsAppBar> {
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,15 +26,15 @@ class _CustomAppBarState extends State<CustomAppBar> {
         Padding(
           padding: const EdgeInsets.only(top: 20),
           child: Align(
-            alignment: Alignment.topRight,
+            alignment: Alignment.topLeft,
             child: IconButton(
               onPressed: () {
                 setState(() {
-                  print("settings");
+                    Navigator.pop(context);
                 });
               },
               //TODO customize settings widget
-              icon: Icon(Icons.settings),
+              icon: Icon(Icons.arrow_back),
               iconSize: 24,
             ),
           ),

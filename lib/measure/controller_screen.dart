@@ -2,7 +2,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pulse_app/actual_measure/navigator.dart';
-import 'package:pulse_app/custom_widgets/mainButton.dart';
+import 'package:pulse_app/custom_widgets/main_button.dart';
 import 'package:pulse_app/actual_measure/heart_measure/measure_page_view.dart';
 import 'package:pulse_app/measure/constants.dart';
 import 'package:pulse_app/measure/measure_screen_1.dart';

@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pulse_app/actual_measure/heart_measure/result_screen.dart';
-import 'package:pulse_app/custom_widgets/customAppBar.dart';
-import 'package:pulse_app/custom_widgets/mainButton.dart';
+import 'package:pulse_app/custom_widgets/custom_app_bar.dart';
+import 'package:pulse_app/custom_widgets/main_button.dart';
 import 'package:pulse_app/measure/constants.dart';
 import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 

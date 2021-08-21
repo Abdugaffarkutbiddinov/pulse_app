@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pulse_app/custom_widgets/bad_emoji.dart';
-import 'package:pulse_app/custom_widgets/customAppBar.dart';
+import 'package:pulse_app/custom_widgets/custom_app_bar.dart';
 import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 import 'package:pulse_app/measure/constants.dart';
 
@@ -69,7 +69,8 @@ class HistoryHolder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10,bottom: 10,left: 15,right: 15),
+      padding: const EdgeInsets.only(top: 10,bottom: 10,left: 15,right: 15
+      ),
       child: Container(
         height: 70,
         width: 350,
