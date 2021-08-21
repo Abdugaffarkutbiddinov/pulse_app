@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pulse_app/custom_widgets/customAppBar.dart';
 import 'package:pulse_app/custom_widgets/mainButton.dart';
 import 'package:pulse_app/measure/constants.dart';
-import 'package:pulse_app/measure/custom_widgets.dart';
+import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class ResultScreen extends StatefulWidget {
   @override

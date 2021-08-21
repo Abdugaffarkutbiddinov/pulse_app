@@ -5,7 +5,7 @@ import 'package:pulse_app/actual_measure/heart_measure/result_screen.dart';
 import 'package:pulse_app/custom_widgets/customAppBar.dart';
 import 'package:pulse_app/custom_widgets/mainButton.dart';
 import 'package:pulse_app/measure/constants.dart';
-import 'package:pulse_app/measure/custom_widgets.dart';
+import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class StartScreen extends StatefulWidget {
   @override

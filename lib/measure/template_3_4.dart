@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pulse_app/measure/custom_widgets.dart';
+import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class MeasureTemplateScreen extends StatelessWidget {
   MeasureTemplateScreen({required this.image, required this.text});

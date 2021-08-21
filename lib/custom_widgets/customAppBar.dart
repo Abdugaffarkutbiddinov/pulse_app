@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pulse_app/measure/custom_widgets.dart';
+import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class CustomAppBar extends StatefulWidget {
   const CustomAppBar({required this.text});

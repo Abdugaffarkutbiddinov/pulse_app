@@ -15,6 +15,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^0.22.0
+  syncfusion_flutter_charts: ^19.2.56
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -87,6 +88,9 @@ flutter:
   - assets/rightBookPage.svg
   - assets/statisticsClockPointer.svg
   - assets/statisticsFrame.svg
+  - assets/toLeft.svg
+  - assets/toRight.svg
+  - assets/historyFrame.svg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

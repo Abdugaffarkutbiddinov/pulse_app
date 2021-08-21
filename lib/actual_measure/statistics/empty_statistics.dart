@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pulse_app/custom_widgets/customAppBar.dart';
-import 'package:pulse_app/measure/custom_widgets.dart';
+import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class EmptyStatistics extends StatefulWidget {
   final String text;
@@ -22,7 +22,7 @@ class _EmptyStatisticsState extends State<EmptyStatistics> {
   final leftBookPage = SvgPicture.asset('assets/leftBookPage.svg');
   final leftBookCover = SvgPicture.asset('assets/leftBookCover.svg');
   final feather = SvgPicture.asset('assets/feather.svg');
-  final clockFrame = SvgPicture.asset('assets/clockFrame');
+  final clockFrame = SvgPicture.asset('assets/clockFrame.svg');
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +35,13 @@ class _EmptyStatisticsState extends State<EmptyStatistics> {
           Center(
             child: Stack(
               children: [
+                Positioned(
+                  child: clockFrame,
+                  top: 55.93,
+                  left: 31.43,
+                  right: 73.62,
+                  bottom: 50.54,
+                ),
                 statisticsFrame,
                 Positioned(
                   child: statisticsClockPointer,
@@ -78,13 +85,7 @@ class _EmptyStatisticsState extends State<EmptyStatistics> {
                   right: 3.95,
                   bottom: 97.89,
                 ),
-                Positioned(
-                  child: clockFrame,
-                  top: 55.93,
-                  left: 31.43,
-                  right: 73.62,
-                  bottom: 50.54,
-                )
+
               ],
             ),
           ),
