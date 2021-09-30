@@ -1,3 +1,4 @@
+import 'package:auto_route/annotations.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -110,48 +111,3 @@ class HistoryHolder extends StatelessWidget {
   }
 }
 
-// Stack(
-// children: [
-// _frame,
-// Positioned(
-// child: BadEmoji(colored: leftColored),
-// top: 12,
-// left: 16,
-// right: 287,
-// bottom: 12,
-// ),
-// Positioned(
-// child: Text(
-// '108',
-// style: TextStyle(
-// fontSize: 24,
-// fontWeight: FontWeight.w800,
-// fontFamily: 'Raleway'),
-// ),
-// top: 8,
-// left: 48,
-// right: 209,
-// bottom: 8,
-// ),
-// Positioned(
-// child: CustomText(
-// text: 'Bpm'.toUpperCase(),
-// fontSize: 18,
-// fontWeight: FontWeight.w600),
-// top: 12,
-// left: 118,
-// right: 168,
-// bottom: 12,
-// ),
-// Positioned(
-// child: CustomText(
-// text: '07.19.21'.toUpperCase(),
-// fontSize: 18,
-// fontWeight: FontWeight.w400),
-// top: 8,
-// left: 223,
-// right: 24,
-// bottom: 8,
-// ),
-// ],
-// ),

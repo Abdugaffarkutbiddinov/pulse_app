@@ -20,7 +20,7 @@ class _MainButtonState extends State<MainButton> {
       constraints: BoxConstraints.tightFor(width: 259, height: 59),
       child: ElevatedButton(
         child: Container(
-          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 1),
           child: CustomText(
             text: widget.text, fontSize: 30, fontWeight: FontWeight.w700,),
         ),

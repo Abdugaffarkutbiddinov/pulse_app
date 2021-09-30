@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pulse_app/actual_measure/history/empty_page.dart';
 import 'package:pulse_app/actual_measure/statistics/empty_page.dart';
 import 'package:pulse_app/actual_measure/statistics/statistics_page.dart';
 
@@ -15,7 +16,7 @@ class HistoryPageView extends StatefulWidget {
 class _HistoryPageViewState extends State<HistoryPageView> {
 
   PageController _pageController = PageController(initialPage: 0);
-  List<Widget> pages = [EmptyPage(text: 'History',),HistoryPage(),];
+  List<Widget> pages = [HistoryEmptyPage(),HistoryPage(),];
   bool scrollable = true;
 
   @override

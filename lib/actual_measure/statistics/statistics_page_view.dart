@@ -12,7 +12,7 @@ class StatisticsPageView extends StatefulWidget {
 
 class _StatisticsPageViewState extends State<StatisticsPageView> {
   PageController _pageController = PageController(initialPage: 0);
-  List<Widget> pages = [EmptyPage(text: 'Statistics',),StatisticsPage(),];
+  List<Widget> pages = [EmptyPage(),StatisticsPage(),];
   bool scrollable = true;
 
   @override

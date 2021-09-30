@@ -4,9 +4,7 @@ import 'package:pulse_app/custom_widgets/custom_app_bar.dart';
 import 'package:pulse_app/custom_widgets/custom_widgets.dart';
 
 class EmptyPage extends StatefulWidget {
-  final String text;
 
-  EmptyPage({required this.text});
 
   @override
   _EmptyPageState createState() => _EmptyPageState();
@@ -30,7 +28,7 @@ class _EmptyPageState extends State<EmptyPage> {
         child: Container(
       child: Column(
         children: [
-          CustomAppBar(text: widget.text),
+          CustomAppBar(text: "Statistics"),
           SizedBox(height: 100,),
           Center(
             child: Stack(
@@ -91,7 +89,7 @@ class _EmptyPageState extends State<EmptyPage> {
           ),
           SizedBox(height: 55,),
           CustomText(
-              text: "You don`t have ${widget.text.toLowerCase()} yet",
+              text: "You don`t have ${"Statistics".toLowerCase()} yet",
               fontSize: 18,
               fontWeight: FontWeight.w400)
         ],
